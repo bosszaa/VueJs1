@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.Js - Tutorial</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+    <div id="vue-app">
+      <hr>
+      Name:<input type="text" v-model="name">
+      Food Fav:
+      <input type="checkbox" value="ส้มตำ" v-model="foods">
+      <label>ส้มตำ</label>
+      <input type="checkbox" value="พิซซ่า" v-model="foods">
+      <label>พิซซ่า</label>
+      <input type="checkbox" value="kfc" v-model="foods">
+      <label>kfc</label>
+      <br>
+      Gender<br>
+      <input type="radio" value="ชาย" v-model="gender"> <label>Male</label><br>
+      <input type="radio" value="หญิง" v-model="gender"> <label>Female</label><br>
+      <br>
+      อาชีพ :
+      <select v-model="job">
+        <option disabled value="">กรุณาเลือกอาชีพของคุณ : </option>
+        <option>โปรแกรมเมอร์</option>
+        <option>พ่อค้า</option>
+        <option>ตำรวจ</option>
+        <option>นิสิต นักศึกษา</option>
+        <option>คนส่งอาหาร</option>
+      </select>
+      <hr>
+    <h1>Name : {{name}}</h1>
+    <h1>Job : {{job}}</h1>
+    <h1>Age : {{age}}</h1>
+    <h1>Website :<a v-bind:href="website">click link</a></h1>
+
+    <h1>Food:{{foods}}</h1>
+    <h1>Gender:{{gender}}</h1>
+
+    <input type="text" v-on:keyup.enter="addCount" >
+    <h1>Count:{{count}}</h1></br>
+    <button type="button" v-on:click="addAge">Add</button>
+    <button type="button" v-on:click="SubtractAge">Sub</button>
+  </div>
+
+      <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
